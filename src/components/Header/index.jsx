@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import {Menu } from './styles.js';
 
@@ -8,13 +9,13 @@ function Header(){
     <>
     
         <Menu>
-                <img src={logo} alt="Logo SnapPacking"/>
-            <ul className="menu-links">
-                <li><a href="#">O Game</a></li>
+                <Link to="/"><img src={logo} alt="Logo SnapPacking"
+                /></Link>
+              <ul className="menu-links">
+                <li><Link to="#">O Game</Link></li>
                 <li><a href="#">História</a></li>
                 <li><a href="#">Personagens</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-
+                <li><Link to="/newsLetter">News Letter</Link></li>
             </ul>
         </Menu>
         

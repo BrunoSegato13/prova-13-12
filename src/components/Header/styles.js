@@ -18,6 +18,8 @@ border-radius: 3px;
 
  img{
    width: 100px;
+   
+
  }
 
  ul{

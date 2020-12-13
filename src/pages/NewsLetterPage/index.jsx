@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
+import Img from '../../assets/news.png';
+
+import { MyForm }  from './styles';
+
 function NewsLetter() {
 
   const [user, setUser] = useState({});
+  const [check, setChek] = useState(true);
 
   function onChange(event){
 
@@ -18,14 +23,26 @@ function NewsLetter() {
 
     event.preventDefault();
     console.log(user);
+
+  }
+
+  function HandlleChange(event) {
+    if(check == true){
+      setChek(false);
+      return;
+    }
+    setChek(true);
+    
+
   }
 
   return (
     <>
       <Header/>
+        <MyForm>
+        <img src={Img} alt="Morrigan"/>
         <form onSubmit={onSubmit}>
-          <div>
-            <label htmlFor="name">
+          <label htmlFor="name">
               <span>Nome:</span>
               <input
                 id='name'
@@ -43,20 +60,48 @@ function NewsLetter() {
                 onChange={onChange}
               />
             </label>
-            <label htmlFor="age">
-            <span>Age:</span>
+            <label htmlFor="birth">
+            <span>Data de nascimento:</span>
               <input
-                id='age'
+                id='birth'
                 type='date'
-                name='age'
+                name='birth'
                 onChange={onChange}
               />
             </label>
-          </div>
-          <div>
+            <label htmlFor="phone">
+            <span>Telefone:</span>
+              <input
+                id='phone'
+                type='tel'
+                name='phone'
+                onChange={onChange}
+              />
+            </label>
+            
             <button type="submit">Salvar</button>
+          <div>
+            <label  htmlFor="newsLetter">
+              <input
+                id='newsLetter'
+                type= "checkbox"
+                name='age'
+                onChange={HandlleChange}
+                
+              />
+              <span>Receber News Letter</span>
+              
+             
+              
+            </label>
           </div>
-        </form>
+          {check ? <p>Não vai se inscrever?</p> : <p>
+                Talvez o Archdemon o encontre 
+                nos seus sonhos
+              </p> }
+            </form>
+            
+        </MyForm>
       <Footer/>
     </>
   )
