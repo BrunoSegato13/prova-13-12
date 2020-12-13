@@ -1,0 +1,20 @@
+[
+  {
+    "img": "https://res.cloudinary.com/domdmzvhy/image/upload/v1607885972/samples/alistair_r1xmej.jpg",
+    "name": "Alistair",
+    "race": "Human",
+    "class": "Warrior"
+  },
+  {
+    "img": "https://res.cloudinary.com/domdmzvhy/image/upload/v1607885968/samples/morrigan_ocznx6.jpg",
+    "name": "Morrigan",
+    "race": "Human",
+    "class": "Mage"
+  },
+  {
+    "img": "https://res.cloudinary.com/domdmzvhy/image/upload/v1607885963/samples/leiliana_mlh5o3.jpg",
+    "name": "Leliana",
+    "race": "Human",
+    "class": "Rougue"
+  }
+]
